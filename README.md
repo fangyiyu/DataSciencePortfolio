@@ -6,7 +6,7 @@ This is a time series analysis project deployed with Django which gives users ac
 ## Structure of the Django Project
 
 <p align="center">
-  <img width="350" src="https://github.com/fangyiyu/Bitcoin/blob/master/structure.png">
+  <img width="350" src="https://github.com/fangyiyu/Bitcoin_Prediction_Django/blob/master/structure.png">
 </p>
  
  ## Data
