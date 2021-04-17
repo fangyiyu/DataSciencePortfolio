@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}Bitcoin Price Prediction{% endblock %}</title>
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="{% static 'app/styles.css' %}" rel="stylesheet" media="screen">
+
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{% static 'app/custom.js' %}"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/styles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/classic.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/classic.date.css' %}" />
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="{% static 'app/scripts/picker.js' %}"></script>
+    <script src="{% static 'app/scripts/picker.date.js' %}"></script>
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand">Bit Predict</a>
+            <!-- <div class="navbar-brand">Fangyi Yu</div> -->
+        </div>
+    </div>
+
+    <div class="container body-content">
+
+    {% block body %}
+        
+    </div>
+    
+    {% endblock %}
+    <footer>
+        <p style="color:#fff" class="text-center">&copy; 2021 By Fangyi Yu</p>
+    </footer>
+
+</body>
+
+</html>

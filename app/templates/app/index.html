@@ -1,0 +1,219 @@
+{% extends "app/layout.html" %}
+
+{% block body %}
+
+<script>
+
+    $(document).ready(function () {
+        var url = window.location.href;  
+        var checkLink = url.substr(url.length - 8);
+        if (checkLink === "predict/") {
+        $('#btnsGroup1').removeClass("hidden");
+        $('#btnsGroup2').removeClass("hidden");
+        $('#dash').removeClass("active");
+        $('#dash').removeClass("in");
+        $('#predict').addClass("active");
+        $('#predict').addClass("in");
+        $('#001').removeClass("active");
+        $('#002').addClass("active");
+        }
+        $('#preloader').delay(3000).fadeOut('slow');
+
+    // Preloader Gif
+    $("#btnPredict").click(function () {
+
+    });
+
+    // Tooltip and modal
+    $('[data-tooltip="tooltip"]').tooltip();
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+      });
+
+    $('.datepicker').pickadate({
+  // An integer (positive/negative) sets it relative to today.
+        max: 7,
+  // `true` sets it to today. `false` removes any limits.
+        min: true
+})
+    
+})  
+// https://dribbble.com/shots/1821178-Sales-Report?list=buckets&offset=0
+
+</script>
+
+<div id="container">
+    <div id="sideMenu">
+        <ul class="menu">    
+            <li id="001"><a data-toggle="tab" href="#dash">Dashborad</a></li>
+            <li id="002"><a data-toggle="tab" href="#predict">Predictitons</a></li>
+            <li id="003"><a data-toggle="tab" href="#doc">Introduction</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="tab-content">
+            <div id="doc" class="tab-pane fade">
+                <div id="desc">
+
+                    <br>
+                    <h4>Bitcoin Prediction Web Application</h4>
+                    <p>The project aims to build a web application that gives users access to predicting Bitcoin 
+                        price in a specific time period, more specifically, seven days from the current date. Considering confidence 
+                        intervals, three predicted values are generated for the chosen date. In this case, users can compare the predicted 
+                        price, the interactive graph of historical bitcoin price together with the sever days prediction (trend analysis), 
+                        and their buying price (if possible) to make trading decisions. </p>
+                    <br>
+                    <p>
+                        Technologies involved: Machine learning, Time Series Analysis, Python, Django, Javascript, Jquery, Html, Css, Plotly.
+                    </p>
+                </div>
+            </div>
+            <div id="dash" class="tab-pane fade in active">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default hidden">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Binance Account Information</a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body" style="background-color:#1D2330">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="col-xl-12">
+                                        <p>
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;Server Time: </span>
+                                            <span>{{ serverTim }}</span></p>
+                                        <p>
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;System Status: </span>
+                                            <span>{{ sysStatus }}</span></p>
+                                        <p>
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;Account Status: </span>
+                                            <span>{{ status }}</span></p>
+                                        <p>
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;Bitcoin Balance: </span>
+                                            <span>{{ balance }}</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Bitcoin Price Chart</a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse in">
+                            <div class="panel-body" style="background-color:#1D2330">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <br>
+                                        <div style="height:560px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div id="predict" class="tab-pane fade">
+                <h1>Here you can get access to the prediction of bitcoin price of the future up to seven days.</h1>
+                <br>
+                <p>Please pick the date for prediction:</p>
+                <br>
+                <!-- Let user choose a date  -->
+                <form action="{% url 'app:predict' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-4">
+                        <input type="text" name="market_dt" class="datepicker form-control" required placeholder="Enter a date" style="cursor:pointer" id="btnPredict">
+                        </div>
+                        <div class="col-md-2">
+                        <button type="submit" id='predict' class="btn btn-danger ">Predict</button>
+                        </div>
+                        <div class="col-md-4 hidden" id="btnsGroup1">
+                            <!-- Button trigger modal and tooltip -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-tooltip="tooltip"
+                                title="The most likely predicted price" data-target="#default">
+                                default
+                            </button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-tooltip="tooltip" data-placement="bottom"
+                                title="Predicted price in the best scenario" data-target="#best">
+                                best
+                            </button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-tooltip="tooltip"
+                                title="Predicted price in the worst scenario" data-target="#worst">
+                                worst
+                            </button>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="hidden" id="btnsGroup2">
+                        <a href="{% url 'app:graph' %}" class="btn btn-info" role="button" aria-pressed="true" id='predict'>Projected Visualization</a>
+                    </div>
+                </form>
+                <br>
+            <div class="modal fade" id="default" tabindex="-1" role="dialog" aria-labelledby="defaultLabel" aria-hidden="true" style="color:#000;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="defaultModalLabel">Default Prediction</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        The predicted price for Bitcoin on {{ RequestDate }} is {{ prediction_text }} USD.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="best" tabindex="-1" role="dialog" aria-labelledby="bestLabel" aria-hidden="true" style="color:#000;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bestModalLabel">The best scenario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        In the best scenario, the predicted price for Bitcoin on {{ RequestDate }} is {{ optimistic_pred }} USD.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="worst" tabindex="-1" role="dialog" aria-labelledby="worstLabel" aria-hidden="true" style="color:#000;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="worstModalLabel">The worst scenario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        In the worst scenario, the predicted price for Bitcoin on {{ RequestDate }} is {{ perssimistic_pred }} USD.
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+            </div>
+
+        </div>
+        </div>
+    </div>
+</div>
+        <!-- Preloader -->
+<div id="preloader">
+  <div id="loader"></div>
+</div>
+
+
+
+{% endblock %}

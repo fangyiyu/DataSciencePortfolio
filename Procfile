@@ -1,0 +1,1 @@
+web: gunicorn pred_bitcoin.wsgi
