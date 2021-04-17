@@ -18,14 +18,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pred_bitcoin.settings") 
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'y(o(ynrr*)^rj37cl@dw8a$ks8723&jkkv6oy7ess*jh+r2!7g'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['predbit.herokuapp.com']
 # '0.0.0.0'
