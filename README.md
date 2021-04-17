@@ -25,5 +25,5 @@ This is a time series analysis project deployed with Django which gives users ac
 
 
 ## Deployment
-I have deployed the applicaiton on Heroku, and here is the live [demo](https://predbit.herokuapp.com/).
+I have deployed the applicaiton on Heroku, and here is the live [demo](https://predbit.herokuapp.com/).  
 Note: After click on "Predict" button or "Projected Visualization" button, the backend machine learning model will start to run until converge, this process will take time.
