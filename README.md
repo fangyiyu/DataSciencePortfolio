@@ -1,8 +1,6 @@
-# Capstone report
-
 ## Problem statement
 
-The capstone project aims to build a web application that gives authenticated users access to predicting Bitcoin price in a specific time period, more specifically, seven days from the users' login date. Considering confidence intervals, three predicted values are generated for the chosen date. In this case, users can compare the predicted price, the interactive graph of historical bitcoin price, and their buying price (if possible) to make trading decisions. 
+This project aims to build a web application that gives users access to predicting Bitcoin price in a specific time period, more specifically, seven days from the current date. Considering confidence intervals, three predicted values are generated for the chosen date. In this case, users can compare the predicted price, the interactive graph of historical bitcoin price, and their buying price (if possible) to make trading decisions. 
 
 ## Structure of the Django Project
 
