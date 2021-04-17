@@ -1,1 +1,1 @@
-web: gunicorn pred_bitcoin.wsgi
+web: gunicorn pred_bitcoin.wsgi --log-file -
