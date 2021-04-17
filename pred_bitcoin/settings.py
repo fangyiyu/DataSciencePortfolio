@@ -27,8 +27,8 @@ SECRET_KEY = 'y(o(ynrr*)^rj37cl@dw8a$ks8723&jkkv6oy7ess*jh+r2!7g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-# '0.0.0.0', 'predbit.herokuapp.com'
+ALLOWED_HOSTS = ['predbit.herokuapp.com']
+# '0.0.0.0'
 
 # Application definition
 
