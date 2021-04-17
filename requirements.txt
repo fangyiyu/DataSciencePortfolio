@@ -39,6 +39,7 @@ pyparsing==2.4.7
 pystan==2.19.1.1
 python-binance==0.7.10
 python-dateutil==2.8.1
+python-decouple==3.4
 pytz==2021.1
 regex==2021.4.4
 requests==2.25.1
