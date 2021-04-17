@@ -17,6 +17,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pred_bitcoin.settings") 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -24,10 +25,10 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pred_bitcoin.settings")
 SECRET_KEY = 'y(o(ynrr*)^rj37cl@dw8a$ks8723&jkkv6oy7ess*jh+r2!7g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'predbit.herokuapp.com']
-
+ALLOWED_HOSTS = []
+# '0.0.0.0', 'predbit.herokuapp.com'
 
 # Application definition
 
@@ -124,24 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'handlers': {
-#         'console': {
-#             'class': 'logging.StreamHandler',
-#         },
-#     },
-#     'loggers': {
-#         # Note this empty so all the loggers will show!
-#         '': {
-#             'handlers': ['console'],
-#             'level': 'DEBUG',
-#         },
-#     },
-# }
