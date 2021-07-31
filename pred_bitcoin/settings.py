@@ -32,6 +32,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['0.0.0.0', 'predbit.herokuapp.com']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [

@@ -2,7 +2,6 @@ asgiref==3.3.4
 attrs==20.3.0
 autobahn==21.3.1
 Automat==20.2.0
-binance==0.3
 certifi==2020.12.5
 cffi==1.14.5
 chardet==4.0.0
@@ -13,9 +12,8 @@ cryptography==3.4.7
 cycler==0.10.0
 Cython==0.29.22
 dateparser==1.0.0
-Django==3.2
+Django==3.2.5
 ephem==3.7.7.1
-gunicorn==20.1.0
 hijri-converter==2.1.1
 holidays==0.11.1
 hyperlink==21.0.0
@@ -28,7 +26,7 @@ matplotlib==3.4.1
 numpy==1.20.2
 pandas==1.2.4
 Pillow==8.2.0
-plotly==4.14.3
+plotly==5.1.0
 prophet==1.0.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -48,6 +46,7 @@ service-identity==18.1.0
 setuptools-git==1.2
 six==1.15.0
 sqlparse==0.4.1
+tenacity==8.0.1
 tqdm==4.60.0
 Twisted==21.2.0
 txaio==21.2.1
