@@ -29,7 +29,7 @@ This is a time series analysis project deployed with Django which gives users ac
 - Create a virtual environment by ``` virtualenv <my_env_name>```
 - Activate the env by ```<my_env_name>/bin/activate```
 - Clone my Repo by ``` git clone <the https of the repo>```
-- Get into the dir where manage.py is by ```cd pred_bitcoin_v2```
+- Get into the dir where manage.py is by ```cd Bitcoin_Prediction_Django```
 - Install required packages by ``` pip install -r requirements.txt```. This step may take a while, since the pystan and prophet packages may take approximately up to three minutes. You may encounter "Failed building wheel for prophet", but the package will ultimately been installed.
 - Make migrations by ``` python3 manage.py makemigrations```, then ``` python3 manage.py migrate```
 - Run the application by ``` python3 manage.py runserver```
