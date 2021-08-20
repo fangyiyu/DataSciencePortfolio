@@ -25,7 +25,3 @@ This is a time series analysis project deployed with Django which gives users ac
 - Make migrations by ``` python3 manage.py makemigrations```, then ``` python3 manage.py migrate```
 - Run the application by ``` python3 manage.py runserver```
 
-
-## Deployment
-I have deployed the applicaiton on Heroku, and here is the live [demo](https://predbit.herokuapp.com/).  
-Note: After click on "Predict" button or "Projected Visualization" button, the backend machine learning model will start to run until converge, this process will take time.
