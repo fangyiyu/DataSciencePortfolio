@@ -1,3 +1,24 @@
 [submodule "NLP_WebApplication"]
 	path = NLP_WebApplication
 	url = https://github.com/fangyiyu/NLP_WebApplication.git
+[submodule "Data_Visualization"]
+	path = Data_Visualization
+	url = https://github.com/fangyiyu/Data_Visualization.git
+[submodule "Google_Cloud_Platform"]
+	path = Google_Cloud_Platform
+	url = https://github.com/fangyiyu/Google_Cloud_Platform.git
+[submodule "Fake_News_Detection"]
+	path = Fake_News_Detection
+	url = https://github.com/fangyiyu/Fake_News_Detection.git
+[submodule "Modified_MNIST_Classification"]
+	path = Modified_MNIST_Classification
+	url = https://github.com/fangyiyu/Modified_MNIST_Classification.git
+[submodule "Machine-Learning-and-NLP"]
+	path = Machine-Learning-and-NLP
+	url = https://github.com/fangyiyu/Machine-Learning-and-NLP.git
+[submodule "Natural_Language_Processing"]
+	path = Natural_Language_Processing
+	url = https://github.com/fangyiyu/Natural_Language_Processing.git
+[submodule "Recommendation_Systems"]
+	path = Recommendation_Systems
+	url = https://github.com/fangyiyu/Recommendation_Systems.git
