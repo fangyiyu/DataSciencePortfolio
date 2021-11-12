@@ -5,12 +5,6 @@
 
 This is a time series analysis project deployed with Django which gives users access to predicting Bitcoin price in a specific time period. The backend machine learning algorithm is Facebook [Prophet](https://facebook.github.io/prophet/), and frontend made with Javascript (Jquery), Html5 and Css3. Considering confidence intervals, three predicted values are generated for the chosen date. In this case, users can compare the predicted price, the interactive graph of historical bitcoin price, and their buying price (if possible) to make trading decisions. 
 
-## Structure of the Django Project
-
-<p align="center">
-  <img width="350" src="https://github.com/fangyiyu/Bitcoin_Prediction_Django/blob/master/structure.png">
-</p>
- 
  ## Data
 - The real-time bitcoin price chart in the homepage is from [Bitcoin.com API](https://developer.bitcoin.com/bitcoincom-link/docs/getting-started). 
 - The data fed to the machine learning model for forecasting is fetched from [Binance API](https://python-binance.readthedocs.io/en/latest/).
