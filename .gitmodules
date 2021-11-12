@@ -1,0 +1,3 @@
+[submodule "NLP_WebApplication"]
+	path = NLP_WebApplication
+	url = https://github.com/fangyiyu/NLP_WebApplication.git
