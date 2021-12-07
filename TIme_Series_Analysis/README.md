@@ -11,7 +11,7 @@ This is a time series analysis project deployed with Django which gives users ac
 
 
 ## Run the application locally
-- Create a virtual environment by ``` virtualenv <my_env_name>```
+- Create a virtual environment by ```python3 -m venv .venv```
 - Activate the env by ```source <my_env_name>/bin/activate```
 - Clone my Repo by ``` git clone <the https of the repo>```
 - Get into the dir where manage.py is by ```cd Bitcoin_Prediction_Django```
