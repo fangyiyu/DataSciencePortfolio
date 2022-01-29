@@ -52,7 +52,7 @@ Twisted==21.2.0
 txaio==21.2.1
 typing-extensions==3.7.4.3
 tzlocal==2.1
-ujson==4.0.2
+ujson>=5.1.0
 urllib3>=1.26.5
 whitenoise==5.2.0
 zope.interface==5.3.0
