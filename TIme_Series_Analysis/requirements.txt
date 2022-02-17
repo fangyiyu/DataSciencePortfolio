@@ -48,7 +48,7 @@ six==1.15.0
 sqlparse>=0.4.2
 tenacity==8.0.1
 tqdm==4.60.0
-Twisted==21.2.0
+twisted>=22.1
 txaio==21.2.1
 typing-extensions==3.7.4.3
 tzlocal==2.1
