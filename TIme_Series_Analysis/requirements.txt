@@ -8,7 +8,7 @@ chardet==4.0.0
 cmdstanpy==0.9.68
 constantly==15.1.0
 convertdate==2.3.2
-cryptography==3.4.7
+cryptography>=39.0.1
 cycler==0.10.0
 Cython==0.29.22
 dateparser==1.0.0
